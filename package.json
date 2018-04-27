@@ -50,6 +50,7 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "devDependencies": {
+    "classnames": "^2.2.5",
     "node-sass": "^4.9.0",
     "react-router-dom": "^4.2.2",
     "sass-loader": "^7.0.1"
