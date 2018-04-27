@@ -21,7 +21,7 @@ export default class ClassDetail extends Component {
 
   static propTypes = {
     index: PropTypes.string,
-    desktop: PropTypes. bool,
+    desktop: PropTypes.bool,
   }
 
   static defaultProps = {
