@@ -1,3 +1,7 @@
+.amr--menu {
+  border-right: 1px solid $color-6;
+}
+
 .amr--menu-icon {
   @include border-radius;
   @include border($color-2);
