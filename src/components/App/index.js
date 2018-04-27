@@ -42,7 +42,7 @@ export default class App extends Component {
     return (
       <Router>
         <div className={mainClasses}>
-          <Menu desktopView={desktopView} data={data} style={{'border-right': '1px solid #0033FF'}}/>
+          <Menu desktopView={desktopView} data={data} className="amr--menu"/>
           <header className="amr--header">
             <h1 className="amr--title">Role Recall</h1>
           </header>

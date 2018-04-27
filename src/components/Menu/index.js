@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import Button from '../Button';
 import classnames from 'classnames';
 
 export default class Menu extends Component {
@@ -42,11 +43,11 @@ export default class Menu extends Component {
     const mobileMenu = (
       <nav>
         <div className="amr--menu__wrapper">
-          <button onClick={this.toggleFlyout} tabIndex={0} className="amr--menu-icon">
+          <Button onClick={this.toggleFlyout} tabIndex={0} className="amr--menu-icon">
             <span className="amr--menu-icon__line-top"></span>
             <span className="amr--menu-icon__line"></span>
             <span className="amr--menu-icon__line-bottom"></span>
-          </button>
+          </Button>
 
         </div>
 

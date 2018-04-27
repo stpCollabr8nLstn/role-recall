@@ -1,55 +1,47 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import createFetcher from '../Fetcher';
 
-export default class ClassDetail extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      detail: null
-    }
+export default createFetcher (
+  (props) => 'http://www.dnd5eapi.co/api/classes/' + props.index + '/' )
+    (class ClassDetail extends Component {
+      state = {
+        detail: null
+      }
 
-  }
+      static propTypes = {
+        loading: PropTypes.bool,
+        data: PropTypes.object,
+        desktop: PropTypes.bool,
+      }
 
-  componentWillReceiveProps(nextProps) {
-    const url = 'http://www.dnd5eapi.co/api/classes/' + nextProps.index + '/';
-    fetch(url)
-      .then(res => res.json())
-      .then(info => {
-        this.setState({ detail: info})
-      })
-  }
+      static defaultProps = {
+        desktop: true,
+      }
 
-  static propTypes = {
-    index: PropTypes.string,
-    desktop: PropTypes.bool,
-  }
+      render() {
+        const { data: detail } = this.props;
 
-  static defaultProps = {
-    index: '1',
-    desktop: true,
-  }
+        return (
+          <div className="amr--detail__wrapper" style={this.props.desktop ? {left: '35%'} : {}}>
+            {detail && (
+              <div className="amr--detail">
+                <h2>{detail.name}</h2>
+                <p>Hit Die: {detail.hit_die}</p>
+                <p>Saving Throws: {detail.saving_throws.map(saveThrow => {
+                  return <li key={saveThrow.name}>{saveThrow.name}</li>
+                })}</p>
+                <p>Proficiencies: {detail.proficiencies.map(p => {
+                  return <li key={p.name}>{p.name}</li>
+                })}</p>
 
-  render() {
-    const { detail } = this.state;
+              </div>
 
-    return (
-      <div className="amr--detail__wrapper" style={this.props.desktop ? {left: '35%'} : {}}>
-        {detail && (
-          <div className="amr--detail">
-            <h2>{detail.name}</h2>
-            <p>Hit Die: {detail.hit_die}</p>
-            <p>Saving Throws: {detail.saving_throws.map(saveThrow => {
-              return <li key={saveThrow.name}>{saveThrow.name}</li>
-            })}</p>
-            <p>Proficiencies: {detail.proficiencies.map(p => {
-              return <li key={p.name}>{p.name}</li>
-            })}</p>
+            )}
 
           </div>
+        );
+      }
+    }
 
-        )}
-
-      </div>
-    );
-  }
-}
+)
