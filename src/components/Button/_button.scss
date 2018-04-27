@@ -1,0 +1,19 @@
+.amr--button {
+  @include app-font;
+  @include border-radius;
+  @include border;
+  background: transparent;
+  height: 32px;
+  margin: 0 auto;
+  padding: 4px 16px;
+
+  &:focus {
+    outline: none;
+    @include fancy-outline;
+  }
+
+  &:hover {
+    background: $color-4;
+    color: $color-1;
+  }
+}

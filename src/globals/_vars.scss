@@ -1,0 +1,36 @@
+// Colors
+$color-1: #ffffff;
+$color-2: #0033FF;
+$color-3: #4800AD;
+$color-4: #45077A;
+$color-5: #36223B;
+$color-6: #2B4557;
+
+// Mixin
+@mixin border-radius { border-radius: 4px; }
+@mixin border($color: $color-2) { border: 1px solid $color; }
+@mixin font { font-family: 'Anonymous Pro', monospace; }
+@mixin fancy-outline{ box-shadow: 0 0 0 2px $color-1, 0 0 0 3px $color-2;} 
+
+// Typography
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+@mixin app-font {
+  @include font;
+  font-size: 1rem;
+  color: $color-6;
+  font-weight: 600;
+}
+
+@mixin app-title {
+  @include font;
+  font-size: 2rem;
+  font-weight: 600;
+  color: $color-1;
+}
+
+@mixin app-sub-title {
+  @include font;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  color: $color-3;
+}

@@ -1,0 +1,65 @@
+{
+	"_id": "5a52bcb7559f00418e5336f2",
+	"index": 1,
+	"name": "Barbarian",
+	"hit_die": 12,
+	"proficiency_choices": [{
+		"from": [{
+			"name": "Skill: Animal Handling",
+			"url": "http://www.dnd5eapi.co/api/proficiencies/106"
+		}, {
+			"name": "Skill: Athletics",
+			"url": "http://www.dnd5eapi.co/api/proficiencies/108"
+		}, {
+			"name": "Skill: Intimidation",
+			"url": "http://www.dnd5eapi.co/api/proficiencies/112"
+		}, {
+			"name": "Skill: Nature",
+			"url": "http://www.dnd5eapi.co/api/proficiencies/115"
+		}, {
+			"name": "Skill: Perception",
+			"url": "http://www.dnd5eapi.co/api/proficiencies/116"
+		}, {
+			"name": "Skill: Survival",
+			"url": "http://www.dnd5eapi.co/api/proficiencies/122"
+		}],
+		"type": "proficiencies",
+		"choose": 2
+	}],
+	"proficiencies": [{
+		"url": "http://www.dnd5eapi.co/api/proficiencies/1",
+		"name": "Light armor"
+	}, {
+		"url": "http://www.dnd5eapi.co/api/proficiencies/2",
+		"name": "Medium armor"
+	}, {
+		"url": "http://www.dnd5eapi.co/api/proficiencies/18",
+		"name": "Shields"
+	}, {
+		"url": "http://www.dnd5eapi.co/api/proficiencies/19",
+		"name": "Simple weapons"
+	}, {
+		"url": "http://www.dnd5eapi.co/api/proficiencies/20",
+		"name": "Martial weapons"
+	}],
+	"saving_throws": [{
+		"url": "http://www.dnd5eapi.co/api/ability-scores/1",
+		"name": "STR"
+	}, {
+		"url": "http://www.dnd5eapi.co/api/ability-scores/3",
+		"name": "CON"
+	}],
+	"starting_equipment": {
+		"url": "http://www.dnd5eapi.co/api/startingequipment/1",
+		"class": "Barbarian"
+	},
+	"class_levels": {
+		"url": "http://www.dnd5eapi.co/api/classes/Barbarian/levels",
+		"class": "Barbarian"
+	},
+	"subclasses": [{
+		"name": "Berserker",
+		"url": "http://www.dnd5eapi.co/api/subclasses/1"
+	}],
+	"url": "http://www.dnd5eapi.co/api/classes/1"
+}
